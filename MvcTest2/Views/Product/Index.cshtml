@@ -1,0 +1,13 @@
+﻿@model IReadOnlyCollection<MvcTest2.Models.Product>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@foreach (var product in Model)
+{
+	<p>
+		@Html.ActionLink(product.Name, "Details", new {id = product.Id})
+	</p>
+}
